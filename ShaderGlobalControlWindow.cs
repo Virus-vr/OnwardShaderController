@@ -26,6 +26,7 @@ public class ShaderGlobalControlWindow : EditorWindow
     private NightVisionColor activeNightVisionColor = NightVisionColor.Green;
     #endregion
 
+    #region Initialization
     [MenuItem("Tools/PP_Shader Control")]
     public static void ShowWindow()
     {
@@ -63,6 +64,16 @@ public class ShaderGlobalControlWindow : EditorWindow
             }
         }
     }
+
+    private void OnDisable()
+    {
+        Shader.SetGlobalFloat("_PreProcessLUTStrength", 0.0f);
+        Shader.DisableKeyword(ShaderBoostKeyword);
+        Shader.DisableKeyword(ShaderScanlinesKeyword);
+        Shader.SetGlobalFloat("_PreProcessDesaturation", 1.0f);
+        Shader.SetGlobalColor("_PreProcessColor", new(1,1,1,0));
+    }
+    #endregion
 
     private void OnGUI()
     {
