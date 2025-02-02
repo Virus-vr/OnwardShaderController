@@ -70,7 +70,7 @@ public class ShaderGlobalControlWindow : EditorWindow
         Shader.SetGlobalFloat("_PreProcessLUTStrength", 0.0f);
         Shader.DisableKeyword(ShaderBoostKeyword);
         Shader.DisableKeyword(ShaderScanlinesKeyword);
-        Shader.SetGlobalFloat("_PreProcessDesaturation", 1.0f);
+        Shader.SetGlobalFloat("_PreProcessDesaturation", 0.0f);
         Shader.SetGlobalColor("_PreProcessColor", new(1,1,1,0));
     }
     #endregion
