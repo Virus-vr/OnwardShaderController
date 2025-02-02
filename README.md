@@ -2,7 +2,7 @@
 Simple helper window to preview the preprocessing effects of shaders made for Onward.
 
 # How to install
-1. Donwload the file
+1. Donwload the file called ShaderGlobalControlWindow.cs
 2. Import it into your project
 3. Move it into a folder with the name "Editor" if you don't have one, create one yourself.
 
